@@ -90,7 +90,9 @@
           conflict causado por el paso 4.
         </h3>
         <div class="answer">
-          Colocar acá el hash. Nota: El hash sería algo como: 8a000d3d2ec8b5f8b2286ad279c54b430fc97c67<br />
+          Colocar acá el hash. <br />
+          Hash: dd0f695f2388721829bde1801b6ac80a4ea79039 (en el branch gh-pages) <br />
+          Nota: El hash sería algo como: 8a000d3d2ec8b5f8b2286ad279c54b430fc97c67<br />
           o mejor aún, podrían apuntarlo directamente a github:
           <a href="https://github.com/devlabs-usb/tarea1-git/commit/8a000d3d2ec8b5f8b2286ad279c54b430fc97c67" target="blank">8a000d3d2ec8b5f8b2286ad279c54b430fc97c67</a>
         </div>
@@ -107,10 +109,8 @@
           subsecuencia “DD”.
         </h3>
         <div class="answer">
-          Coloca tu respuesta aquí.<br/>
-          Opcionalmente, puedes poner los archivos con la solución
-          en tu repositorio y poner la dirección del archivo acá.
-          Como por ejemplo: /Código/Scrabble.py
+          Las letras que no se repiten consecutivamente son: 'Q' y 'X'<br/>
+          Ruta del archivo : /Codigo/Scrabble.py
         </div>
       </article>
       <article id="q3">
@@ -120,7 +120,47 @@
           repo', 'dirty working tree' y 'merge conflict'.
         </h3>
         <div class="answer">
-          Coloca tus respuestas aquí.
+          Working Directory: Es el directorio en el que están todos los archivos de texto del
+          proyecto en que se trabaja actualmente. Está compuesto por "tracked files" y 
+          "untracked files". Los "untracked files" son archivos que están en el directorio
+          pero que no están siendo seguidos por git. En cambio, los "tracked files" sí son
+          seguidos por git. 
+          <br/><br/>
+
+          index: Es la ubicación de los archivos del "working directory" que están listos para ser
+          llevados al repositorio local. Después de modificar un archivo, git lo etiqueta como
+          modificado; si queremos llevarlo al index, debemos correr el comando git add nombre_archivo
+          . Para agregar el archivo al repositorio local, se debe
+          usar el comando git commit. Si un archivo se agrega al index y luego se 
+          vuelve a modificar, cuando se corra git commit se llevará al repositorio local
+          el archivo en el estado en el que estaba cuando se agregó al index.
+          <br/><br/>
+  
+          local repo: Para git, el repositorio local es el sitio en el que se
+          almacena el estado de los archivos al momento de hacer git commit. Git 
+          permite volver a estados anteriores del repositorio local, es decir,
+          permite volver a algún commit hecho anterioremente. Puedes tener archivos en
+          el directorio de trabajo que no estén en el repositorio local.  
+
+          <br/><br/>
+
+
+          remote repo: Es un repositorio de archivos que está almacenado
+          en algún servidor externo. Git, permite importar repositorios
+          externos a través del comando git clone, que almacena en algún 
+          directorio local una copia de un repositorio remoto.
+
+          <br/><br/>
+
+          dirty working tree: Es un directorio de trabajo al que se hicieron
+          cambios, a partir del último commit, que no han sido agregados al 
+          repositorio local.
+
+           <br/><br/>
+          
+           merge conflict: un merge conflict se da cuando git intenta 'mezclar'
+           dos versiones de un mismo archivo pero no puede hacerlo porque ambos
+           fueron modificados en las mismas lineas. Requiere que el usuario intervenga y resuelva el conflicto.
         </div>
       </article>
       <article id="q4">
@@ -150,19 +190,19 @@
             <tbody>
               <tr>
                 <th scope="row">working dir</th>
+                <td>R</td>
                 <td></td>
+                <td>R</td>
                 <td></td>
+                <td>W</td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>W</td>
               </tr>
               <tr>
                 <th scope="row">index</th>
+                <td>R</td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td>W</td>
                 <td>R/W</td>
                 <td></td>
                 <td></td>
@@ -171,12 +211,12 @@
               <tr>
                 <th scope="row">local repo</th>
                 <td></td>
-                <td></td>
-                <td></td>
                 <td>W</td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td>W</td>
+                <td>R/W</td>
+                <td>R</td>
+                <td>R</td>
               </tr>
               <tr>
                 <th scope="row">remote repo</th>
@@ -184,8 +224,8 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td>R</td>
+                <td>R/W</td>
                 <td></td>
               </tr>
             </tbody>
